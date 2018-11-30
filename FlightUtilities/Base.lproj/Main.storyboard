@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="hsf-6U-9p2">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--✈️-->
+        <scene sceneID="dbs-ce-Sw2">
+            <objects>
+                <tableViewController id="SPo-hb-hlo" customClass="SearchFlightViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="t3f-f9-Y1c">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <color key="tintColor" red="0.92941176469999998" green="0.62352941179999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <sections>
+                            <tableViewSection headerTitle="Flight Information" id="ftK-Yw-IrD">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="44" id="mCW-F6-66O">
+                                        <rect key="frame" x="0.0" y="55.5" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="mCW-F6-66O" id="4ZQ-AH-ZhD">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Airline Code" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tZs-zj-97O">
+                                                    <rect key="frame" x="20" y="7" width="335" height="29.5"/>
+                                                    <nil key="textColor"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters" autocorrectionType="no" spellCheckingType="no" returnKeyType="next"/>
+                                                    <connections>
+                                                        <outlet property="delegate" destination="SPo-hb-hlo" id="kyq-Y5-SZj"/>
+                                                    </connections>
+                                                </textField>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="tZs-zj-97O" secondAttribute="trailing" constant="20" id="XHv-9l-sPB"/>
+                                                <constraint firstItem="tZs-zj-97O" firstAttribute="top" secondItem="4ZQ-AH-ZhD" secondAttribute="top" constant="7" id="bAm-D9-NSB"/>
+                                                <constraint firstAttribute="bottom" secondItem="tZs-zj-97O" secondAttribute="bottom" constant="7" id="dks-t1-Kcr"/>
+                                                <constraint firstItem="tZs-zj-97O" firstAttribute="leading" secondItem="4ZQ-AH-ZhD" secondAttribute="leading" constant="20" id="gFQ-YQ-HUT"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="44" id="mHa-hl-Vg4">
+                                        <rect key="frame" x="0.0" y="99.5" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="mHa-hl-Vg4" id="2gy-jZ-oVS">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Flight Code" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hIG-k7-4lt">
+                                                    <rect key="frame" x="20" y="7" width="335" height="29.5"/>
+                                                    <nil key="textColor"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits" spellCheckingType="no" keyboardType="numberPad"/>
+                                                    <connections>
+                                                        <outlet property="delegate" destination="SPo-hb-hlo" id="2Us-nb-pah"/>
+                                                    </connections>
+                                                </textField>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="hIG-k7-4lt" firstAttribute="leading" secondItem="2gy-jZ-oVS" secondAttribute="leading" constant="20" id="8ZU-H7-CvK"/>
+                                                <constraint firstAttribute="bottom" secondItem="hIG-k7-4lt" secondAttribute="bottom" constant="7" id="dyq-Oa-FkZ"/>
+                                                <constraint firstItem="hIG-k7-4lt" firstAttribute="top" secondItem="2gy-jZ-oVS" secondAttribute="top" constant="7" id="lEK-iC-xi6"/>
+                                                <constraint firstAttribute="trailing" secondItem="hIG-k7-4lt" secondAttribute="trailing" constant="20" id="y3T-zr-bvh"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="217" id="aXL-oH-d9c">
+                                        <rect key="frame" x="0.0" y="143.5" width="375" height="217"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="aXL-oH-d9c" id="LJB-Tk-vj8">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="216.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="F39-gV-OxS">
+                                                    <rect key="frame" x="20" y="0.0" width="335" height="216.5"/>
+                                                    <date key="date" timeIntervalSinceReferenceDate="565277589.67810404">
+                                                        <!--2018-11-30 13:33:09 +0000-->
+                                                    </date>
+                                                </datePicker>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="F39-gV-OxS" secondAttribute="trailing" constant="20" id="7To-Zy-bRD"/>
+                                                <constraint firstItem="F39-gV-OxS" firstAttribute="leading" secondItem="LJB-Tk-vj8" secondAttribute="leading" constant="20" id="FF7-le-XN0"/>
+                                                <constraint firstAttribute="bottom" secondItem="F39-gV-OxS" secondAttribute="bottom" id="GQS-8C-hs7"/>
+                                                <constraint firstItem="F39-gV-OxS" firstAttribute="top" secondItem="LJB-Tk-vj8" secondAttribute="top" id="pUk-UJ-oH8"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                            <tableViewSection footerTitle="Written during Swift Alps 2018  at the @_inside workshop🇨🇭" id="edq-1x-GCu">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="gray" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="44" id="LJX-wm-IBe">
+                                        <rect key="frame" x="0.0" y="396.5" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="LJX-wm-IBe" id="LM5-2h-N0k">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Search Flight" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g4Q-HF-zcR">
+                                                    <rect key="frame" x="130.5" y="10" width="114" height="24"/>
+                                                    <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="g4Q-HF-zcR" firstAttribute="centerX" secondItem="LM5-2h-N0k" secondAttribute="centerX" id="AUf-Tl-JGV"/>
+                                                <constraint firstItem="g4Q-HF-zcR" firstAttribute="centerY" secondItem="LM5-2h-N0k" secondAttribute="centerY" id="egS-ex-rgL"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                        </sections>
+                        <connections>
+                            <outlet property="dataSource" destination="SPo-hb-hlo" id="emC-82-Ffu"/>
+                            <outlet property="delegate" destination="SPo-hb-hlo" id="sXw-AE-s2z"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="✈️" id="9V4-H5-lPQ"/>
+                    <connections>
+                        <outlet property="airlineCodeTextField" destination="tZs-zj-97O" id="Gdv-2M-qex"/>
+                        <outlet property="datePicker" destination="F39-gV-OxS" id="4hy-ri-2CA"/>
+                        <outlet property="flightCodeTextField" destination="hIG-k7-4lt" id="azJ-Va-Ral"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4Ap-2d-vlY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1000.8" y="-564.46776611694156"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="1mG-jP-zx3">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="hsf-6U-9p2" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="f8Y-Ur-HmU">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="SPo-hb-hlo" kind="relationship" relationship="rootViewController" id="0rG-h7-SiP"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NzQ-Xb-Wmq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="140" y="-564.46776611694156"/>
+        </scene>
+    </scenes>
+    <color key="tintColor" red="0.92941176469999998" green="0.62352941179999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+</document>
